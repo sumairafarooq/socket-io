@@ -14,12 +14,9 @@
 
     <script>
         var socket = io();
-        socket.on('broadcast', function(data){
-            document.body.innerHTML = '';
-            document.write(data.message);
+        socket.on('reconnecting', function(){
+            alert('You are reconnected')
         })
-
-   
     </script>
 </body>
 </html>
